@@ -2,9 +2,13 @@
 #define __BUTTON_DRIVER_CONFIG_H__
 
 // place for include button hw header
+// example #include <gpio.h>
 
-#define BUTTON_DRIVER_HW_TYPE uint8_t
-//#define BUTTON_DRIVER_HW_READ(pHW) () // bool BUTTON_DRIVER_HW_READ(BUTTON_DRIVER_HW_TYPE* pHW)
+// place for include button counter type header
+#include <stdint.h>
+
+#define BUTTON_DRIVER_HW_TYPE SGPIO
+//example #define BUTTON_DRIVER_HW_READ(pHW) (GPIORead(pHW)) // bool BUTTON_DRIVER_HW_READ(BUTTON_DRIVER_HW_TYPE* pHW)
 
 #define BUTTON_DRIVER_COUNTER_TYPE         uint32_t
 #define BUTTON_DRIVER_COUNTER_MAX_VAL      100

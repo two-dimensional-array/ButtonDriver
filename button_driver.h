@@ -1,7 +1,10 @@
 #ifndef __BUTTON_DRIVER_H__
 #define __BUTTON_DRIVER_H__
 
-#include <stdint.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stddef.h>
 #include <stdbool.h>
 
@@ -29,5 +32,9 @@ bool ButtonRead(button_hw_t* pButtonHW); // need write definition
 
 void ButtonHandlerReset(button_hanler_t* pHandler);
 void ButtonHandler(button_hanler_t* pHandlers, size_t buttonCount);
+
+#ifdef __cplusplus
+}
+#endif // extern "C"
 
 #endif // __BUTTON_DRIVER_H__
