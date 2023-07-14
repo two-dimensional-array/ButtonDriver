@@ -1,6 +1,15 @@
-#include <gpio.hpp>
+#include <string.h>
 #include "button_driver.h"
 #include "button_driver_config.h"
+
+void ButtonHandlerInit(button_hanler_t* pHandlers, const button_hw_t* const pHWs, size_t buttonCount)
+{
+	for (size_t i = 0; i < buttonCount; i++)
+	{
+		ButtonHandlerReset(&pHandlers[i]);
+		memcpy(&pHandlers[i], &pHWs[i], sizeof(button_hw_t));
+	}
+}
 
 void ButtonHandlerReset(button_hanler_t* pHandler)
 {

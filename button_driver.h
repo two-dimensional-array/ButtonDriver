@@ -36,6 +36,7 @@ bool ButtonRead(button_hw_t* pButtonHW); // need write definition
 void ButtonEventHanler(size_t idx, bool state); // need write definition
 #endif
 
+void ButtonHandlerInit(button_hanler_t* pHandlers, const button_hw_t* const pHWs, size_t buttonCount);
 void ButtonHandlerReset(button_hanler_t* pHandler);
 void ButtonHandler(button_hanler_t* pHandlers, size_t buttonCount);
 
