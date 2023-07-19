@@ -8,7 +8,7 @@ extern "C" {
 #include <stddef.h>
 #include <stdbool.h>
 
-#include "button_driver_config.h"
+#include <button_driver_config.h>
 
 typedef BUTTON_DRIVER_HW_TYPE button_hw_t;
 typedef bool button_state_t;
